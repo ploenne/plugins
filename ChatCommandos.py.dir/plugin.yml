@@ -1,0 +1,7 @@
+name: ChatCommando-Plugin
+main: chatcommandoplugin
+version: 1.0
+commands:
+  halloserver:
+    description: Sendet einen Gruss an den Server
+    usage: /halloserver
