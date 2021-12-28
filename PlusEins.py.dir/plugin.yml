@@ -1,0 +1,7 @@
+name: PlusEins-Plugin
+main: pluseinsplugin
+version: 1.0
+commands:
+  pluseins:
+    description: Addiert eins zu der angegebenen Zahl
+    usage: /pluseins <zahl>
