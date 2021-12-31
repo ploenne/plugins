@@ -5,3 +5,6 @@ commands:
   halloserver:
     description: Sendet einen Gruss an den Server
     usage: /halloserver
+  eierkuchen:
+    description: Sendet einen Eierkuchen an den Spieler
+    usage: /eierkuchen

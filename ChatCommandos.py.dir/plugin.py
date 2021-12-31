@@ -8,13 +8,20 @@ class chatcommandoplugin(PythonPlugin):
     
     def onCommand(self, sender, command, label, args):
         
-        logger = self.getLogger()
+        self.getLogger().info("uebriges commando: " + str(command))
         
-        info = "Hallo " + str(sender.name)
+        if "halloserver" in str(command):
+            
+            self.getLogger().info("Hallo" + str(sender.name) + "!!" )
+            self.getServer().broadcastMessage("Hallo " + str(sender.name) + " !!" )
+            return True
         
-        logger.info(infoMessage)
-        
-        #self.getLogger().info("Hallo Spieler " + str(sender.name))
-        self.getServer().broadcastMessage("Hallo " + str(sender.name))
+        else:
+            
+            self.getLogger().info("Hier " + str(sender.name) + " ist dein Eierkuchen !!" )
+
+            self.getServer().broadcastMessage("Hier " + str(sender.name) + " ist dein Eierkuchen !!" )
+            return True
+
         return True
     
