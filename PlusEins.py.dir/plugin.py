@@ -30,13 +30,18 @@ class pluseinsplugin(PythonPlugin):
             wert = args[0]
         
             self.getLogger().info("uebergebener wert: " + wert)
-        
-            zahl = int(wert)
-        
-            zahl2 = zahl + 1
-        
-            self.getServer().broadcastMessage( "Hallo " + sender.name + " dein Ergebnis ist " + str(zahl2) ) 
-
+            
+            if wert.isdigit():
+                
+                    zahl = int(wert)
+                
+                    zahl2 = zahl + 1
+                
+                    self.getServer().broadcastMessage( "Hallo " + sender.name + " dein Ergebnis ist " + str(zahl2)
+                                                      ) 
+            else:
+                    self.getServer().broadcastMessage("Du darfst nur Zahlen einstetzen, keine Wörter!")
+                
             return True
         
         else:
@@ -44,7 +49,7 @@ class pluseinsplugin(PythonPlugin):
             summe = 0
             
             for item in args:
-                summe = summe + int(item)
+                    summe = summe + int(item)
             
             self.getServer().broadcastMessage( "Hallo " + sender.name + " deine Rechenaufgabe ergibt " + str(summe) ) 
 
