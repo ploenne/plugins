@@ -2,6 +2,6 @@ name: KuerbisPlugIn-Plugin
 main: kuerbisplugin
 version: 1.0
 commands:
-  pluseins:
+  kuerbis:
     description: Macht Kuerbis Zauber 
     usage: /kuerbis
