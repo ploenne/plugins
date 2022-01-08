@@ -40,7 +40,7 @@ class pluseinsplugin(PythonPlugin):
                     self.getServer().broadcastMessage( "Hallo " + sender.name + " dein Ergebnis ist " + str(zahl2)
                                                       ) 
             else:
-                    self.getServer().broadcastMessage("Du darfst nur Zahlen einstetzen, keine Wörter!")
+                    self.getServer().broadcastMessage("Du darfst nur Zahlen einstetzen, keine Woerter!")
                 
             return True
         
