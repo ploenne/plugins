@@ -47,12 +47,19 @@ class pluseinsplugin(PythonPlugin):
         else:
             
             summe = 0
+            gerechnet = False 
             
             for item in args:
+                if item.isdigit():
                     summe = summe + int(item)
-            
-            self.getServer().broadcastMessage( "Hallo " + sender.name + " deine Rechenaufgabe ergibt " + str(summe) ) 
-
+                    gerechnet = True
+                else:
+                     self.getServer().broadcastMessage( "Hallo " + sender.name + " mit woertern wie: " + item + " kann ich nicht rechnen!" ) 
+                    
+            if gerechnet == True:  
+                self.getServer().broadcastMessage( "Hallo " + sender.name + " deine Rechenaufgabe ergibt " + str(summe) ) 
+            else:
+                self.getServer().broadcastMessage( "Hallo " + sender.name + " ich bin kein Poet, sondern ein Mathematiker. ICH BRAUCHE ZAHLEN!!!" ) 
             return True  
             
             
